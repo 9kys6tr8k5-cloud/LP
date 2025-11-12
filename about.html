@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About CoroBee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/footer.css">
+  <!--<link rel="stylesheet" href="css/footer.css">-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">
+    <img src="img/corobee.svg" alt="My Logo">
+  </div>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+   <!-- フルスクリーンメニュー -->
+  <nav class="mobile-nav">
+    <!-- 背景用 -->
+    <div class="menu-bg"></div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lineup.html">Lineup</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <!-- ×ボタン -->
+    <div class="close-btn">&times;</div>
+  </nav>
+</header>
+
+<!-- メニュー外クリック用のオーバーレイ -->
+<div class="overlay"></div>
+
+<main>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>日常を、ひとつ上の時間へ。</h1>
+    <p>私たちのパン作りは、そんな想いから始まりました。</p>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="section-light">
+  <div class="container text-center">
+    <h2 class="section-title"><span>私たちの物語</span>Our Story</h2>
+    <p>
+      私たちのパン作りは、<mark>日常の時間を、ひとつ上のものへ</mark>という想いから始まりました。<br>
+      忙しさに追われる毎日の中で、ほんの少し立ち止まる瞬間。<br>
+      そのひとときを、特別な気持ちで満たすことができたら――。<br>
+      そんな願いを込めて、一つひとつのパンを焼き上げています。
+    </p>
+  </div>
+</section>
+
+<!-- Commitment -->
+<section class="section-alt">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title"><span>素材へのこだわり</span>Commitment</h2>
+        <p>
+          使うのは、厳選された<mark>国産小麦</mark>と、<mark>地元の養蜂家</mark>から届く四季折々のはちみつ。<br>
+          小麦は<mark>その土地の気候を映し出し</mark>、はちみつは<mark>季節ごとの花々の香り</mark>を閉じ込めています。<br>
+          自然が生み出す豊かな風味を届けるために、余計なものは加えず、<br>
+          <mark>シンプルな素材だけを選んでいます</mark>。
+        </p>
+      </div>
+      <div class="col-md-6 img-col">
+        <img src="img/about-01.jpg" alt="小麦とはちみつ">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section class="section-dark">
+  <div class="container text-center">
+    <h2 class="section-title"><span>時間と向き合う</span>Philosophy</h2>
+    <blockquote class="highlight-quote">「待つことは、豊かさの一部」</blockquote>
+    <p>
+      パン作りで最も大切にしているのは「時間」です。<br>
+      短縮することなく、ゆっくりと発酵させることで生まれる香りと深み。<br>
+      その過程は決して効率的ではありませんが、<br>
+      「丁寧に待つこと」こそが、私たちの考える豊かさに通じていると信じています。
+    </p>
+  </div>
+</section>
+
+<!-- Connection -->
+<section class="section-alt">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 img-col order-md-2">
+        <img src="img/about-02.jpg" alt="食卓" class="circle-photo">
+      </div>
+      <div class="col-md-6 order-md-1">
+        <h2 class="section-title"><span>私たちが届けたいもの</span>Connection</h2>
+        <p>
+          パンは、単なる食べ物ではなく、人と人を<mark>つなぐ存在</mark>だと思います。<br>
+          家族で囲む食卓、友人との語らい、ひとりで過ごす静かな朝。<br>
+          どんな場面でも、私たちのパンがそっと寄り添い、<br>
+          <mark>心を温める存在</mark>になれたら、それ以上の喜びはありません。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Future -->
+<section class="section-light">
+  <div class="container text-center">
+    <h2 class="section-title"><span>これからも</span>Future</h2>
+    <p>
+      私たちは、毎日の<mark>“何気ない瞬間”</mark>にこそ、本当の豊かさが宿ると考えています。<br>
+      一口食べたときに訪れる、ふっとした安らぎや幸せ。<br>
+      その積み重ねが、暮らしを豊かにするのだと信じています。<br><br>
+      これからも一日一日、心を込めてパンを焼き続け、<br>
+      皆さまの時間をほんの少しでも特別なものにしていきたいと思っています。
+    </p>
+    <div class="img-col mt-5">
+      <img src="img/shop1.jpg" alt="店舗外観" class="w-100 rounded shadow">
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-links mt-4">
+      <a href="lineup.html" class="btn btn-outline-dark me-3 mt-5">商品ラインナップを見る</a>
+      <a href="contact.html" class="btn btn-outline-dark mt-5">お問い合わせはこちら</a>
+    </div>
+  </div>
+</section>
+</main>
+
+
+	
+<footer class="site-footer">
+  <div class="footer-content">
+    <h2>CoroBee</h2>
+    <p>&copy; 2025 CoroBee. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const mobileNav = document.querySelector(".mobile-nav");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".close-btn");
+const menuLinks = mobileNav.querySelectorAll("ul li");
+const menuBg = document.querySelector(".menu-bg");
+
+// メニューを開く関数
+function openMenu() {
+  overlay.style.display = "block";
+  mobileNav.style.pointerEvents = "auto";
+
+  const tl = gsap.timeline();
+  
+  // 左から背景スライドイン
+  tl.to(menuBg, { duration: 1, x: "100%", ease: "power3.out" });
+
+  // 右からリンク順番にフェードイン
+  tl.to(menuLinks, {
+    duration: 0.8,
+    opacity: 1,
+    x: 0,
+    stagger: 0.1,
+    ease: "power3.out"
+  }, "-=0.3");
+	
+ // ×ボタンフェードイン
+tl.to(closeBtn, { 
+  duration: 0.3, 
+  opacity: 1, 
+  onStart: () => { closeBtn.style.pointerEvents = "none"; }, // 開始時は無効
+  onComplete: () => { closeBtn.style.pointerEvents = "auto"; } // アニメ完了で有効
+}, "-=0.2");
+  hamburger.classList.add("active");
+}
+
+// メニューを閉じる関数
+function closeMenu() {
+  const tl = gsap.timeline({
+    onComplete: () => {
+      overlay.style.display = "none";
+      mobileNav.style.pointerEvents = "none";
+    }
+  });
+
+  // リンクを右に戻しフェードアウト
+  tl.to(menuLinks, { duration: 0.3, opacity: 0, x: 50, stagger: 0.05 });
+
+// 閉じるとき
+tl.to(closeBtn, { 
+  duration: 0.2, 
+  opacity: 0,
+  onComplete: () => { closeBtn.style.pointerEvents = "none"; } // 完全に消えたら無効化
+}, "-=0.2");
+
+  // 背景を左に戻す
+  tl.to(menuBg, { duration: 0.5, x: "-100%", ease: "power3.in" }, "-=0.2");
+
+  hamburger.classList.remove("active");
+}
+
+// ハンバーガークリック
+hamburger.addEventListener("click", () => {
+  if (menuLinks[0].style.opacity === "1") {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// ×ボタンクリック
+closeBtn.addEventListener("click", () => {
+  closeMenu();
+});
+
+// オーバーレイクリック
+overlay.addEventListener("click", () => {
+  closeMenu();
+});
+
+// メニューリンククリックでも閉じる
+menuLinks.forEach(link => {
+  link.querySelector("a").addEventListener("click", () => {
+    closeMenu();
+  });
+});
+	
+// モバイルメニューリンク波打ちアニメーション
+document.querySelectorAll(".mobile-nav ul li a").forEach(link => {
+
+  // 初期状態
+  gsap.set(link, { y: 0, color: "#fff" });
+
+  let waveTween;
+
+  link.addEventListener("mouseenter", () => {
+    // 色変更
+    gsap.to(link, { color: "#c4b479", duration: 0.3 });
+
+    // 上下に波打つ
+    waveTween = gsap.to(link, {
+      y: -5,             // 上下の振幅
+      duration: 0.2,     // 1回の往復時間
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1
+    });
+  });
+
+  link.addEventListener("mouseleave", () => {
+    // 元の色に戻す
+    gsap.to(link, { color: "#fff", duration: 0.3 });
+
+    // 波打ち停止 & 元位置に戻す
+    if (waveTween) waveTween.kill();
+    gsap.to(link, { y: 0, duration: 0.2, ease: "power2.out" });
+  });
+});
+	
+
+</script>
+</body>
+</html>

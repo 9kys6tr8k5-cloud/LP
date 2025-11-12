@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商品ラインナップ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/item.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/footer.css">
+  <!--<link rel="stylesheet" href="css/footer.css">-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">
+    <img src="img/corobee.svg" alt="My Logo">
+  </div>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+   <!-- フルスクリーンメニュー -->
+  <nav class="mobile-nav">
+    <!-- 背景用 -->
+    <div class="menu-bg"></div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lineup.html">Lineup</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <!-- ×ボタン -->
+    <div class="close-btn">&times;</div>
+  </nav>
+</header>
+
+<!-- メニュー外クリック用のオーバーレイ -->
+<div class="overlay"></div>
+
+<main>
+  <div class="container py-5">
+    <!-- トップ見出し -->
+    <div class="text-center mb-5 top-title">
+      <h2 class="fw-bold mb-0 pb-3"><span class="sub-title-white m-0 d-block">ラインナップ</span>Lineup</h2>
+    </div>
+
+    <!-- ================== Bread ================== -->
+    <div class="my-5 section-title">
+      <h2>Bread</h2>
+      <p>パン</p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!-- Bread cards -->
+      <!-- Croissant -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/croissant.png" alt="Croissant"><div class="product-info"><div class="product-name">Croissant</div><div class="product-subname">クロワッサン</div></div><div class="product-overlay"><p class="overlay-desc">フランス産バターを使用した<br>芳醇なクロワッサン。</p><div class="product-price"><small>¥</small><span class="price-num">450</span></div></div></div></div>
+      <!-- Batard -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/bucket.png" alt="Batard"><div class="product-info"><div class="product-name">Batard</div><div class="product-subname">バタール</div></div><div class="product-overlay"><p class="overlay-desc">外はパリッと中はもっちり。<br>フランスの定番パン。</p><div class="product-price"><small>¥</small><span class="price-num">380</span></div></div></div></div>
+      <!-- Bagel -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/bagel.png" alt="Bagel"><div class="product-info"><div class="product-name">Bagel</div><div class="product-subname">ベーグル</div></div><div class="product-overlay"><p class="overlay-desc">もちもち食感が特徴のベーグル。<br>毎朝焼きたて。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+      <!-- Cream Bread -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/bread .png" alt="Cream Bread"><div class="product-info"><div class="product-name">Cream Bread</div><div class="product-subname">クリームパン</div></div><div class="product-overlay"><p class="overlay-desc">濃厚なカスタードクリームを包んだ、<br>しっとり柔らかいパン。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+      <!-- White Bread -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/bread.png" alt="White Bread"><div class="product-info"><div class="product-name">White Bread</div><div class="product-subname">食パン</div></div><div class="product-overlay"><p class="overlay-desc">もっちり食感とほんのり甘みが特徴の食パン。</p><div class="product-price"><small>¥</small><span class="price-num">350</span></div></div></div></div>
+      <!-- Butter Bread -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/butter.png" alt="Butter Bread"><div class="product-info"><div class="product-name">Butter Bread</div><div class="product-subname">バターブレッド</div></div><div class="product-overlay"><p class="overlay-desc">風味豊かなバターを練り込んだ、<br>しっとりふわふわの食感。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+      <!-- Baguette -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/melon.png" alt="Baguette"><div class="product-info"><div class="product-name">Baguette</div><div class="product-subname">バゲット</div></div><div class="product-overlay"><p class="overlay-desc">外はパリッと中はもっちり。フランスの定番パン。</p><div class="product-price"><small>¥</small><span class="price-num">380</span></div></div></div></div>
+      <!-- Campagne -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/mountain-shaped loaf.png" alt="Campagne"><div class="product-info"><div class="product-name">Campagne</div><div class="product-subname">カンパーニュ</div></div><div class="product-overlay"><p class="overlay-desc">外は香ばしく、中はもっちりしっとり。</p><div class="product-price"><small>¥</small><span class="price-num">380</span></div></div></div></div>
+      <!-- Naan -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/naan.png" alt="Naan"><div class="product-info"><div class="product-name">Naan</div><div class="product-subname">ナン</div></div><div class="product-overlay"><p class="overlay-desc">外はふんわり、内はもちもち。<br>カレーやスープと相性抜群。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+      <!-- Butter Bun -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/roll.png" alt="Butter Bun"><div class="product-info"><div class="product-name">Butter Bun</div><div class="product-subname">バターパン</div></div><div class="product-overlay"><p class="overlay-desc">ふんわり柔らかい生地に<br>バターの風味をたっぷり。</p><div class="product-price"><small>¥</small><span class="price-num">300</span></div></div></div></div>
+      <!-- Boule -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/shiny brioche loaf.png" alt="Boule"><div class="product-info"><div class="product-name">Boule</div><div class="product-subname">ブール</div></div><div class="product-overlay"><p class="overlay-desc">丸い形が特徴のフランス伝統パン。<br>外は香ばしく、内はしっとり。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+      <!-- Single Baguette -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/single baguette.png" alt="Baguette"><div class="product-info"><div class="product-name">Baguette</div><div class="product-subname">バゲット</div></div><div class="product-overlay"><p class="overlay-desc">外はパリッと香ばしく、中はもっちり。<br>シンプルで飽きのこないパン。</p><div class="product-price"><small>¥</small><span class="price-num">320</span></div></div></div></div>
+    </div>
+
+    <!-- ================== Danish ================== -->
+    <div class="my-5 section-title">
+      <h2>Danish / Viennoiserie</h2>
+      <p>デニッシュ / 菓子パン</p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!-- Pain au Chocolat -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/chocolateroll.png" alt="Pain au Chocolat"><div class="product-info"><div class="product-name">Pain au Chocolat</div><div class="product-subname">パン・オ・ショコラ</div></div><div class="product-overlay"><p class="overlay-desc">上質なチョコを包んだ贅沢なデニッシュ。</p><div class="product-price"><small>¥</small><span class="price-num">520</span></div></div></div></div>
+      <!-- Fruit Danish -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/Danish .png" alt="Fruit Danish"><div class="product-info"><div class="product-name">Fruit Danish</div><div class="product-subname">フルーツデニッシュ</div></div><div class="product-overlay"><p class="overlay-desc">季節のフルーツとバター香る<br>サクサクデニッシュ。</p><div class="product-price"><small>¥</small><span class="price-num">520</span></div></div></div></div>
+      <!-- French Toast -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/French toast.png" alt="French Toast"><div class="product-info"><div class="product-name">French Toast</div><div class="product-subname">フレンチトースト</div></div><div class="product-overlay"><p class="overlay-desc">厚切りパンを卵液に浸して<br>しっとり焼き上げました。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+		<!-- Honey Cream Bread -->
+		<div class="col">
+		  <div class="product-card h-100">
+			<img src="img/item/cream.png" alt="Honey Cream Bread">
+			<div class="product-info">
+			  <div class="product-name">Honey Cream Bread</div>
+			  <div class="product-subname">ハチミツクリームパン</div>
+			</div>
+			<div class="product-overlay">
+			  <p class="overlay-desc">濃厚なハチミツクリームが入ったふんわりパン。</p>
+			  <div class="product-price">
+				<small>¥</small><span class="price-num">350</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+
+    <!-- ================== Sweets ================== -->
+    <div class="my-5 section-title">
+      <h2>Sweets</h2>
+      <p>スイーツ</p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!-- Blueberry Muffin -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/blueberry muffin.png" alt="Blueberry Muffin"><div class="product-info"><div class="product-name">Blueberry Muffin</div><div class="product-subname">ブルーベリーマフィン</div></div><div class="product-overlay"><p class="overlay-desc">新鮮なブルーベリーを使ったふわふわのマフィン。</p><div class="product-price"><small>¥</small><span class="price-num">400</span></div></div></div></div>
+      <!-- Chocolate Cookie -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/chocolate chip cookie.png" alt="Chocolate Cookie"><div class="product-info"><div class="product-name">Chocolate Cookie</div><div class="product-subname">チョコクッキー</div></div><div class="product-overlay"><p class="overlay-desc">カカオたっぷりのサクサククッキー。</p><div class="product-price"><small>¥</small><span class="price-num">250</span></div></div></div></div>
+      <!-- Biscuit -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/plain scone.png" alt="Biscuit"><div class="product-info"><div class="product-name">Biscuit</div><div class="product-subname">ビスケット</div></div><div class="product-overlay"><p class="overlay-desc">サクサク軽い食感でほんのり甘いシンプルなビスケット。</p><div class="product-price"><small>¥</small><span class="price-num">450</span></div></div></div></div>
+      <!-- Pound Cake -->
+      <div class="col"><div class="product-card h-100"><img src="img/item/pound cake.png" alt="Pound Cake"><div class="product-info"><div class="product-name">Pound Cake</div><div class="product-subname">パウンドケーキ</div></div><div class="product-overlay"><p class="overlay-desc">しっとり濃厚な生地にバターと卵の風味が香る定番スイーツ。</p><div class="product-price"><small>¥</small><span class="price-num">380</span></div></div></div></div>
+		 <!-- Chocolate Brownie -->
+	<div class="col">
+	  <div class="product-card h-100">
+		<img src="img/item/chocolate brownie.png" alt="Chocolate Brownie">
+		<div class="product-info">
+		  <div class="product-name">Chocolate Brownie</div>
+		  <div class="product-subname">チョコブラウニー</div>
+		</div>
+		<div class="product-overlay">
+		  <p class="overlay-desc">濃厚でしっとりした<br>
+			チョコレートブラウニー。</p>
+		  <div class="product-price">
+			<small>¥</small><span class="price-num">450</span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <h2>CoroBee</h2>
+    <p>&copy; 2025 CoroBee. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>	
+const hamburger = document.querySelector(".hamburger");
+const mobileNav = document.querySelector(".mobile-nav");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".close-btn");
+const menuLinks = mobileNav.querySelectorAll("ul li");
+const menuBg = document.querySelector(".menu-bg");
+
+// メニューを開く関数
+function openMenu() {
+  overlay.style.display = "block";
+  mobileNav.style.pointerEvents = "auto";
+
+  const tl = gsap.timeline();
+  
+  // 左から背景スライドイン
+  tl.to(menuBg, { duration: 1, x: "100%", ease: "power3.out" });
+
+  // 右からリンク順番にフェードイン
+  tl.to(menuLinks, {
+    duration: 0.8,
+    opacity: 1,
+    x: 0,
+    stagger: 0.1,
+    ease: "power3.out"
+  }, "-=0.3");
+	
+ // ×ボタンフェードイン
+tl.to(closeBtn, { 
+  duration: 0.3, 
+  opacity: 1, 
+  onStart: () => { closeBtn.style.pointerEvents = "none"; }, // 開始時は無効
+  onComplete: () => { closeBtn.style.pointerEvents = "auto"; } // アニメ完了で有効
+}, "-=0.2");
+  hamburger.classList.add("active");
+}
+
+// メニューを閉じる関数
+function closeMenu() {
+  const tl = gsap.timeline({
+    onComplete: () => {
+      overlay.style.display = "none";
+      mobileNav.style.pointerEvents = "none";
+    }
+  });
+
+  // リンクを右に戻しフェードアウト
+  tl.to(menuLinks, { duration: 0.3, opacity: 0, x: 50, stagger: 0.05 });
+
+// 閉じるとき
+tl.to(closeBtn, { 
+  duration: 0.2, 
+  opacity: 0,
+  onComplete: () => { closeBtn.style.pointerEvents = "none"; } // 完全に消えたら無効化
+}, "-=0.2");
+
+  // 背景を左に戻す
+  tl.to(menuBg, { duration: 0.5, x: "-100%", ease: "power3.in" }, "-=0.2");
+
+  hamburger.classList.remove("active");
+}
+
+// ハンバーガークリック
+hamburger.addEventListener("click", () => {
+  if (menuLinks[0].style.opacity === "1") {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// ×ボタンクリック
+closeBtn.addEventListener("click", () => {
+  closeMenu();
+});
+
+// オーバーレイクリック
+overlay.addEventListener("click", () => {
+  closeMenu();
+});
+
+// メニューリンククリックでも閉じる
+menuLinks.forEach(link => {
+  link.querySelector("a").addEventListener("click", () => {
+    closeMenu();
+  });
+});
+	
+// モバイルメニューリンク波打ちアニメーション
+document.querySelectorAll(".mobile-nav ul li a").forEach(link => {
+
+  // 初期状態
+  gsap.set(link, { y: 0, color: "#fff" });
+
+  let waveTween;
+
+  link.addEventListener("mouseenter", () => {
+    // 色変更
+    gsap.to(link, { color: "#c4b479", duration: 0.3 });
+
+    // 上下に波打つ
+    waveTween = gsap.to(link, {
+      y: -5,             // 上下の振幅
+      duration: 0.2,     // 1回の往復時間
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1
+    });
+  });
+
+  link.addEventListener("mouseleave", () => {
+    // 元の色に戻す
+    gsap.to(link, { color: "#fff", duration: 0.3 });
+
+    // 波打ち停止 & 元位置に戻す
+    if (waveTween) waveTween.kill();
+    gsap.to(link, { y: 0, duration: 0.2, ease: "power2.out" });
+  });
+});
+
+</script>
+</body>
+</html>
