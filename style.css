@@ -1,0 +1,483 @@
+@charset "utf-8";
+/* CSS Document */
+
+*,::after,*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background-color: #5b4636;
+  background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+}
+
+section h2,h3{
+	  font-family: Georgia, serif;
+}
+
+.text-muted{
+	font-family: Georgia, serif;
+}
+
+.sub-title-white {
+  line-height: 1.2;
+}
+h2.fw-bold {
+  line-height: 1.1;
+}
+
+section p{
+	font-variant-numeric: tabular-nums;
+}
+
+.text-body {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+
+.site-header {
+  position: fixed; /* 固定ヘッダーにする */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* ロゴ→ナビを縦並びに */
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  background: transparent;   /* 初期は透明 */
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 400px;     /* 横長の初期サイズ */
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0; /* 初期非表示 */
+  transition: all 0.3s;
+  position: absolute;
+  right: 20px;
+  transform: translateY(-50%) translateY(-10px); /* 少し上にずらしてふわっと */
+ z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* フルスクリーンメニュー初期状態 */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 300;
+  pointer-events: none; /* 初期はクリック不可 */
+}
+
+.menu-bg {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  backdrop-filter: blur(20px);
+  z-index: 1;
+}
+
+.mobile-nav ul {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* モバイルナビリンク */
+.mobile-nav ul li {
+  opacity: 0;              /* 初期は非表示 */
+  transform: translateX(50px); /* 初期位置だけ右にずらす */
+  margin: 20px 0;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  font-size: 45px;
+  position: relative;      /* yアニメーション用 */
+  display: inline-block;
+}
+
+.close-btn {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 60px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none; /* ← クリック無効 */
+  z-index: 2;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 250; 
+  background: rgba(0,0,0,0.2);
+}
+
+/* スクロール後の横並び */
+.site-header.scrolled {
+  height: 60px;
+  padding: 10px 40px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex-direction: row;       /* 横並び */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header.scrolled .logo img {
+  width: 100px;
+}
+
+
+    .hero {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+
+    .swiper {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      position: absolute; /* フェード用 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 1; /* 画像は不透明 */
+    }
+
+/* スライド画像を初期サイズ slightly zoom out */
+.hero-swiper .swiper-slide img {
+  transform: scale(1);
+  transition: transform 15s ease; /* スライドの切り替え時間に合わせる */
+}
+
+/* アクティブスライドにズームイン */
+.hero-swiper .swiper-slide-active img {
+  transform: scale(1.1); /* 最大1.1倍にズーム */
+}
+
+
+
+    /* 薄い白オーバーレイ */
+    .overlay-wh {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.3); /* 透明度20%の白 */
+      z-index: 3; /* 画像の上に表示 */
+    }
+
+    .concept-section {
+  height: 90vh;
+  min-height: 90vh;          /* 文字が収まらない場合は伸びる */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #c4b479;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  padding: 20px;
+  box-sizing: border-box;    /* パディングを高さ計算に含める */
+}
+
+    .concept-section h2 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: inline-block;
+      position: relative;
+    }
+    .ss {
+      width: 300px;
+      position: absolute;
+      left: 100px; /* 見出しの左に配置 */
+      top: -10px;
+    }
+    .concept-section h3 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+/* サブタイトルだけサイズを小さく */
+.concept-section h4{
+  font-size: 2rem;   /* サブタイトル用サイズ */
+  font-weight: bold;    /* 任意で軽くする */
+}
+	
+    .concept-section p {
+	  font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto 30px ;
+      position: relative;
+    }
+    .aa{
+      width: 300px;
+      position: absolute;
+      right: 60px; /* 本文最後の右に配置 */
+      bottom: -90px;
+    }
+
+.lineup-section {
+  background-color: #5b4636; /* 少し濃いめの生成り色 */
+  background-image: url("https://www.transparenttextures.com/patterns/nasty-fabric.png");
+  background-repeat: repeat;
+}
+
+.lineup-section h2{
+	color: #E6E6E6;
+}
+
+.sub-title-white{
+	font-size: 1.2rem;
+	color: #E6E6E6 !important;
+}
+
+.more-link {
+  display: inline-block;
+  position: relative;
+  min-width: 160px;
+  font-size: 1.3rem;
+  padding: 8px 4px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* ← 普段は透明 */
+  transition: border-color 0.4s ease;   /* ← アニメーションで自然に */
+}
+
+.more-link-white{
+  display: inline-block;
+  position: relative;
+  min-width: 160px;
+  font-size: 1.4rem;
+  padding: 8px 4px;
+  color: #E6E6E6;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* ← 普段は透明 */
+  transition: border-color 0.4s ease;   /* ← アニメーションで自然に */
+}
+
+.more-link:hover {
+  color: #FF0000;
+  border-bottom-color: #f00;  /* ← ホバー時に線を表示 */
+}
+
+
+.more-link .arrow {
+  position: absolute;
+  left: -5px;  /* ← ここで矢印を左に寄せる */
+}
+
+.story-section{
+	background-color: #c4b479;
+	  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+.row.align-items-center {
+  display: flex;
+  align-items: stretch; /* 左右の高さを揃える */
+}
+
+.col-md-6.text-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.photo-stack {
+  position: relative;
+  width: 600px;  /* 幅固定 */
+  margin: 0 auto;
+  flex: 1;        /* 左カラムの高さに合わせる */
+}
+
+.photo-stack .photo1 {
+  width: 400px;
+  height: 270px;     /* 左カラムの高さに合わせる */
+  object-fit: cover; /* 高さに合わせて画像をトリミング */
+  margin-right: 200px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.photo-stack .photo2 {
+  width: 400px;
+  height: 270px;
+  margin-top: -25px;  /* 重なり量 */
+  margin-left: 200px;   /* 右にずらす */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.photo-stack .photo3 {
+  width: 400px;
+  height: 270px;
+  margin-top: -25px;
+  margin-right: 200px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* ── 店舗情報セクション ── */
+.store-section .container {
+  text-align: center; /* 中央寄せ */
+}
+
+.store-section h2,p{
+	color: #E6E6E6;
+}
+
+
+
+.store-section .row {
+  display: flex;
+  flex-direction: column; /* 縦並びに変更 */
+  align-items: center;    /* 中央揃え */
+}
+
+.store-section .col-md-6 {
+  max-width: 700px; /* 適度な幅に制限 */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.store-section .map-frame {
+  margin: 0 auto 20px; /* 下に余白を付けて中央 */
+  width: 100%;
+  max-width: 700px;
+  height: 400px;       /* 高さは調整 */
+}
+
+.store-info-card {
+	color: #000;
+	font-size: 1.4rem;
+}
+
+.site-footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+@font-face {
+  font-family: 'DidotLTStd';
+  src: url('css/fonts/DidotLTStd.woff2') format('woff2');
+}
+
+.footer-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+   font-family: "Didot LT Std", Georgia, serif;
+}
+
+.footer-content p {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  font-family: Georgia, serif;
+}
+
+/* SNSアイコン */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+  color: #1da1f2; /* Twitterブルー */
+  transform: scale(1.2);
+}
+
+/* InstagramとFacebookのホバー色も変更 */
+.social-link[aria-label="Instagram"]:hover {
+  color: #e4405f;
+}
+.social-link[aria-label="Facebook"]:hover {
+  color: #1877f2;
+}

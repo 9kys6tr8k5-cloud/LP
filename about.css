@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  font-family: "Times New Roman", serif;
+  color: #212529;
+  line-height: 1.9;
+	background-color: #c4b479;
+	  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  background-repeat: repeat;      /* タイル状に繰り返す */
+  background-size: auto;          /* サイズ調整、autoのままでもOK */
+}
+
+/* section共通 */
+section {
+  padding: 120px 20px;
+}
+
+.section-light {
+  background-color: #fdfbf7;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+.section-alt {
+  background-color: #e7decf;
+  background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+}
+
+.section-dark {
+  background-color: #5b4636;
+  color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+}
+
+/* 見出し */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* アンダーラインを見出しの幅いっぱいに */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;         /* ← fixed: 見出し幅いっぱい */
+  height: 3px;
+  background: #c4b479;
+  transform: none;     /* ← 中央寄せ用のtransformは削除 */
+}
+
+/* 見出し全体 */
+h2.section-title {
+  font-size: 3rem;   /* 元 2rem → 少し大きめ */
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+}
+
+/* 英語サブ */
+h2.section-title span {
+  display: block;
+  font-size: 1.4rem;   /* 元 0.9rem → 読みやすく */
+  font-weight: 500;
+  color: #999;
+  margin: 0;
+}
+
+/* 本文 */
+p {
+  font-size: 1.25rem;  /* 元 1.1rem → ゆったり */
+  line-height: 2;      /* 行間も少し広げる */
+  margin-bottom: 1.75rem;
+}
+
+p mark {
+  background: linear-gradient(transparent 65%, #f3e8b5 65%);
+  padding: 0 2px;
+}
+
+
+h2 span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+/* 引用 */
+.highlight-quote {
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: 2rem 0;
+  color: #c4b479;
+}
+
+/* 写真 */
+.img-col img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* 写真スタイル追加 */
+.photo-stack {
+  position: relative;
+  display: inline-block;
+}
+.photo-stack .main-photo {
+  position: relative;
+  z-index: 2;
+}
+.photo-stack .sub-photo {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 80%;
+  opacity: 0.8;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.circle-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("../img/hero-01.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero h1 { font-size: 3rem; font-weight: bold; }
+.hero p { font-size: 1.2rem; margin-top: 1rem; }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.scroll-indicator i {
+  display: block;
+  margin-top: 5px;
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* CTA */
+.cta-links .btn {
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-dark:hover{
+	background-color: #FFFFFF;
+}
